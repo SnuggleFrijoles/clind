@@ -4,6 +4,9 @@ from src.roller import Roller
 class TestRoller(unittest.TestCase):
 
     def test_roller1(self):
+        """
+        Test multiple die with addition
+        """
 
         roller = Roller("2d20+5")
 
