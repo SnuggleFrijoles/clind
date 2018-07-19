@@ -12,7 +12,7 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.plus, 5)
 
         r = roller.roll()
-        self.assertTrue(7 <= r <= 45)
+        self.assertTrue(7 <= r and r <= 45)
 
     def test_roller2(self):
 
@@ -23,7 +23,7 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.plus, 3)
         
         r = roller.roll()
-        self.assertTrue(4 <= r <= 15)
+        self.assertTrue(4 <= r and r <= 15)
     
     def test_roller3(self):
 
@@ -34,5 +34,5 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.plus, 0)
         
         r = roller.roll()
-        self.assertTrue(1 <= r <= 6)
+        self.assertTrue(1 <= r and r <= 6)
 
