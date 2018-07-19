@@ -7,3 +7,8 @@ Command Line Interface... & Dragons!
 To use clind, simply run:
 
     ./clind <command>
+
+## Authors
+Isaac Cortes Mera
+Zach Krueger
+Yash Patel
