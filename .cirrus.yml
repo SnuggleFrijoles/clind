@@ -1,5 +1,5 @@
 container:
-  image: python3:latest
+    image: python:latest
 
 test_task:
   test_script: make test
