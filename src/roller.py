@@ -51,7 +51,7 @@ class Roller():
         
         for i in range(self.n):
 
-            total += random.randint(0, self.die)
+            total += random.randint(1, self.die)
 
         total += self.plus
 
