@@ -1,5 +1,5 @@
 import unittest
-from ..src.roller import Roller
+from src.roller import Roller
 
 class TestRoller(unittest.TestCase):
 

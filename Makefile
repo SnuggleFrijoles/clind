@@ -4,4 +4,4 @@ run:
 	@python src/main.py
 
 test:
-	@echo "Not yet implemented!"
+	@python -m unittest discover -v test
