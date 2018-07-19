@@ -1,5 +1,5 @@
 # clind
-Command Line Interface... and Dragons!
+Command Line Interface... & Dragons!
 
 
 ## Usage
