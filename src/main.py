@@ -1,7 +1,7 @@
 import sys
 import argparse
 
-from roll import roll
+from roller import Roller
 
 parser = argparse.ArgumentParser()
 
@@ -39,11 +39,13 @@ def main():
     # Call tool based on arguments
     if args.roll:
 
-        die = int(args.roll[0])
+        die_string = args.roll[0]
 
-        print("Rolling a d{}".format(die))
+        print("Rolling {}".format(die_string))
 
-        r = roll(die)
+        roller = Roller(die_string)
+
+        r = roller.roll()
 
         print(r)
 
