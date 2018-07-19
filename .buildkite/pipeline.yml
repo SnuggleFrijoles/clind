@@ -1,0 +1,3 @@
+steps:
+  - label: Running unit tests...
+    command: make test
