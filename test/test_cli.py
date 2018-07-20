@@ -3,8 +3,13 @@ from src.cli import CLI
 from src.exceptions import *
 
 class TestCLI(unittest.TestCase):
+    """
+    class: TestCLI
 
-    def testProcessCommand(self):
+    Test cases for the CLI class
+    """
+
+    def testInvalidCommand(self):
 
         cli = CLI()
         
@@ -12,12 +17,28 @@ class TestCLI(unittest.TestCase):
         with self.assertRaises(ClindException):
             
             cli.processCommand("not a command")
-        
+      
+
+    def testRoll(self):
+
+        cli = CLI()
+
         # Check roll command
         for i in range(100):
 
             r = cli.processCommand("roll 1d20")
 
             self.assertTrue(1 <= r <= 20)
+
+
+    def testName(self):
+
+        cli = CLI()
+        
+        name = cli.processCommand("name")
+        
+        # Check that name command returns a string with space
+        self.assertTrue(isinstance(name, str))
+        self.assertTrue(" " in name)
 
 
