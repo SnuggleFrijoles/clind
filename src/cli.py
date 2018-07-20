@@ -1,4 +1,6 @@
 
+import random
+
 from roller import Roller
 from exceptions import *
 
@@ -56,6 +58,14 @@ class CLI():
         elif command_word == "exit":
 
             pass
+
+        elif command_word == "name":
+
+            with open("src/names.txt") as names_file:
+
+                names = list(names_file)
+            
+                return random.choice(names).strip() + " " + random.choice(names).strip()
 
         else:
 
