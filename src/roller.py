@@ -14,9 +14,15 @@ class Roller():
         if "d" in self.die_string:
 
             split = self.die_string.split("d")
+            
+            
+            if split[0] == '':
+                self.n = 1
+            else:
+                self.n = int(split[0])
 
-            self.n = int(split[0])
             rest = split[1]
+
 
             if "+" in rest:
                 
