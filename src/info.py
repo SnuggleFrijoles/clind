@@ -36,7 +36,7 @@ class Info:
 
     @classmethod
     def listTopics(self):
-        return topics.keys()
+        return list(Info.topics.keys())
 
 
 class Races(Info): 
