@@ -41,4 +41,16 @@ class TestRoller(unittest.TestCase):
         for i in range(100):
             r = roller.roll()
             self.assertTrue(1 <= r and r <= 6)
+    
+    def test_roller4(self):
+
+        roller = Roller("d20")
+
+        self.assertEqual(roller.n, 1)
+        self.assertEqual(roller.die, 20)
+        self.assertEqual(roller.plus, 0)
+        
+        for i in range(100):
+            r = roller.roll()
+            self.assertTrue(1 <= r and r <= 20)
 
