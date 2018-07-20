@@ -3,6 +3,7 @@ import random
 
 from roller import Roller
 from exceptions import *
+from info import *
 
 class CLI():
     """
@@ -66,6 +67,17 @@ class CLI():
                 names = list(names_file)
             
                 return random.choice(names).strip() + " " + random.choice(names).strip()
+        elif command_word == "info":
+
+            if len(command_split) == 2:
+
+                topic = command_split[1]
+                endpoint = Info.topics[topic]
+                return Info(endpoint).listResults()
+
+            else:
+
+                return Info.listTopics()
 
         else:
 
