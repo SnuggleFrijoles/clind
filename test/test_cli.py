@@ -1,6 +1,11 @@
 import unittest
-from src.cli import CLI
-from src.exceptions import *
+
+import sys
+
+sys.path.append("src")
+
+from cli import CLI
+from exceptions import *
 
 class TestCLI(unittest.TestCase):
     """
