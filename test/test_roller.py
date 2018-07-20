@@ -13,9 +13,10 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.n, 2)
         self.assertEqual(roller.die, 20)
         self.assertEqual(roller.plus, 5)
-
-        r = roller.roll()
-        self.assertTrue(7 <= r and r <= 45)
+        
+        for i in range(100):
+            r = roller.roll()
+            self.assertTrue(7 <= r and r <= 45)
 
     def test_roller2(self):
 
@@ -25,8 +26,9 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.die, 12)
         self.assertEqual(roller.plus, 3)
         
-        r = roller.roll()
-        self.assertTrue(4 <= r and r <= 15)
+        for i in range(100):
+            r = roller.roll()
+            self.assertTrue(4 <= r and r <= 15)
     
     def test_roller3(self):
 
@@ -36,6 +38,7 @@ class TestRoller(unittest.TestCase):
         self.assertEqual(roller.die, 6)
         self.assertEqual(roller.plus, 0)
         
-        r = roller.roll()
-        self.assertTrue(1 <= r and r <= 6)
+        for i in range(100):
+            r = roller.roll()
+            self.assertTrue(1 <= r and r <= 6)
 
